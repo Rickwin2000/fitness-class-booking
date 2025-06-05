@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "13283d83-f3be-433e-93af-5f43c2247e17",
+		"name": "fitness-clas-bookings",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45656321"
+	},
+	"item": [
+		{
+			"name": "classes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/classes/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"classes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fitness_class_id\": 5,\r\n    \"client_name\": \"Rickwin\",\r\n    \"client_email\": \"rickwin2025@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/book/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"book",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bookings",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/bookings/?client_email=rickwin2025@gmail.com",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"bookings",
+						""
+					],
+					"query": [
+						{
+							"key": "client_email",
+							"value": "rickwin2025@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
