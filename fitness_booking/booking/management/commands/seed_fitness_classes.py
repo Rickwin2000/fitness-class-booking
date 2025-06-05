@@ -2,6 +2,7 @@ import random
 from datetime import datetime, timedelta
 
 from django.core.management.base import BaseCommand
+from django.utils import timezone
 
 from booking.models import FitnessClass
 
@@ -20,7 +21,7 @@ class Command(BaseCommand):
 
             day_offset = random.randint(-10, 10)
             hour = random.randint(6, 19)
-            datetime_val = datetime.now().replace(hour=hour, minute=0, second=0, microsecond=0) + timedelta(days=day_offset)
+            datetime_val = timezone.now().replace(hour=hour, minute=0, second=0, microsecond=0) + timedelta(days=day_offset)
 
             total_slots = random.randint(10, 30)
             available_slots = random.randint(0, total_slots)
