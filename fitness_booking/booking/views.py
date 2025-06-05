@@ -15,6 +15,7 @@ class FitnessClassList(generics.ListAPIView):
     def get_serializer_context(self):
         return {'request': self.request}
 
+
 class BookClass(APIView):
     def post(self, request):
         serializer = BookingSerializer(data=request.data)
