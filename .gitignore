@@ -1,0 +1,53 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# SQLite DBs
+*.sqlite3
+*.db
+
+# Django cache / logs / local configs
+*.log
+*.pot
+*.pyc
+*.pyo
+*.env
+.env.*
+.envrc
+.env.local
+
+# Pytest cache
+.pytest_cache/
+.cache/
+.coverage
+htmlcov/
+
+# Virtual env
+venv/
+env/
+ENV/
+.venv/
+py_env/
+pip-wheel-metadata/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node (if applicable for frontend)
+node_modules/
+dist/
+build/
+npm-debug.log*
+
+# Docker (optional)
+docker-compose.override.yml
+Dockerfile
+.dockerignore
+
+# OS specific
+.DS_Store
+Thumbs.db
